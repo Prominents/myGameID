@@ -3,49 +3,29 @@
 // Object Items
 const items = [
   {
-    img: "1.png",
-    job: "Guardian",
-    naming: "Bianca",
-    desc: "A medieval mercenary was a skilled and often ruthless fighter who would offer their services to various lords or armies for pay, often fighting in wars or battles far from their own lands.",
-    bgColor: "#ffe474",
-    stripe1: '#FFB4B4',
-    stripe2: '#FFDEB4',
+    logo: "assets/logo-HSR.png",
+    naming: "Honkai Star Rail",
+    bgImg: "assets/HSR.webp",
   },
   {
-    img: "2.png",
-    job: "Knight",
-    naming: "Fiona",
-    desc: "A knight is a member of a medieval European warrior class who would typically serve a lord and wear armor while fighting on horseback.",
-    bgColor: "#d2e2d7",
-    stripe1: '#CEEDC7',
-    stripe2: '#86C8BC',
+    logo: "assets/logo-BA.png",
+    naming: "Blue Archive",
+    bgImg: "assets/BA.webp",
   },
   {
-    img: "3.png",
-    job: "Princess",
-    naming: "Cornelia",
-    desc: "A princess is a female member of a royal family, usually a daughter or granddaughter of a king or queen, who holds a high social rank and may have ceremonial or symbolic duties.",
-    bgColor: "#f3c3be",
-    stripe1: '#FFAACF',
-    stripe2: '#EA8FEA',
+    logo: "assets/logo-GI.png",
+    naming: "Genshin Impact",
+    bgImg: "assets/GI.webp",
   },
   {
-    img: "4.png",
-    job: "Knight",
-    naming: "Aurora",
-    desc: "A knight is a member of a medieval European warrior class who would typically serve a lord and wear armor while fighting on horseback.",
-    bgColor: "#ADE4DB",
-    stripe1: '#FFF6BD',
-    stripe2: '#FFD4B2',
+    logo: "assets/logo-WF.png",
+    naming: "World Flipper",
+    bgImg: "assets/WF.webp",
   },
   {
-    img: "5.png",
-    job: "Guardian",
-    naming: "Lumina",
-    desc: "A medieval mercenary was a skilled and often ruthless fighter who would offer their services to various lords or armies for pay, often fighting in wars or battles far from their own lands.",
-    bgColor: "#dedede",
-    stripe1: '#FFDCA9',
-    stripe2: '#FAAB78',
+    logo: "assets/logo-HI3.png",
+    naming: "Honkai Impact",
+    bgImg: "assets/HI3.webp",
   },
 ];
 
@@ -64,14 +44,12 @@ class Slider {
 
   // Item Property
   renderItem() {
-    const { img, job, naming, desc } = this.items[this.active];
+    const { logo, naming } = this.items[this.active];
 
     const sliderContent = `
-       <img class="slider__img" src="${img}" alt="${naming}" />
+       <img class="slider-image" src="${logo}" alt="${naming}" />
        <div class="title">
-         <p >${job}</p>
          <strong >${naming}</strong><br/>
-         <code >${desc}</code>
        </div>
      `;
     const sliderIndex = `
@@ -92,18 +70,11 @@ class Slider {
     timeLine.to(".slider", {
       delay,
       duration: 0.2,
-      backgroundColor: `${items[this.active].bgColor}`,
-    });
-    timeLine.to(".line-one", {
-      duration: 0.2,
-      backgroundColor: `${items[this.active].stripe1}`,
-    });
-    timeLine.to(".line-two", {
-      duration: 0.2,
-      backgroundColor: `${items[this.active].stripe2}`,
+      backgroundSize: "cover",
+      background: `url(${items[this.active].bgImg})`,
     });
     timeLine.fromTo(
-      ".slider__img",
+      ".slider-image",
       {
         x: 150 * dir,
         opacity: 0,
@@ -145,7 +116,7 @@ class Slider {
   // Button Arrow
   handleClick(type) {
     const dir = type === "next" ? 1 : -1;
-    timeLine.to(".slider__img", {
+    timeLine.to(".slider-image", {
       x: -250 * dir,
       opacity: 0,
       duration: 1,
@@ -179,16 +150,3 @@ class Slider {
 const slider = new Slider(items);
 slider.renderItem();
 slider.basicAimation(1, 1);
-
-TweenMax.from(".line-one", 1, {
-  opacity: 0,
-  delay: 2,
-  y: -800,
-  ease: Expo.easeInOut
-})
-TweenMax.from(".line-two", 1, {
-  opacity: 0,
-  delay: 2.5,
-  y: -800,
-  ease: Expo.easeInOut
-})

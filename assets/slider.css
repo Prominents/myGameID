@@ -17,6 +17,7 @@ html {
   /* overflow: hidden; */
 }
 
+
 html,
 body {
   width: 100%;
@@ -45,7 +46,7 @@ button {
   height: 100vh;
   background: #FFDEB4;
   left: 30%;
-} 
+}
 
 .navbar {
   position: absolute;
@@ -61,10 +62,13 @@ button {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-}a {
+}
+
+a {
   text-decoration: none;
   color: #000;
 }
+
 a:hover {
   color: #ff6e6e;
 }
@@ -107,19 +111,20 @@ a:hover {
 .slider {
   height: 100%;
   overflow: hidden;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
+
 
 .slider__wrraper {
   height: 100%;
   justify-content: flex-end;
 }
 
-.slider__img {
-  width: 20rem;
+.slider-image {
+  width: 15rem;
   border-radius: 20px;
-  margin-bottom: 1.7rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 34rem;
+  filter: drop-shadow(3px 3px 3px #333);
 
 }
 
@@ -135,11 +140,12 @@ a:hover {
   top: 276px;
   left: 40%;
   line-height: 1;
-  font-size: 120px;
+  font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
   z-index: 1;
 }
+
 .title::after {
   content: '';
   width: 0;
@@ -151,8 +157,9 @@ a:hover {
   background: #ff6e6e;
   transition: width 0.4s;
 }
+
 .title:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .title p {
@@ -163,6 +170,7 @@ a:hover {
   left: 150px;
   letter-spacing: 10px;
 }
+
 .title code {
   font-size: 20px;
   display: flex;
@@ -279,7 +287,9 @@ a:hover {
   width: 100%;
   padding: 40px;
   font-size: 40px;
+  z-index: 1;
 }
+
 @media (min-width: 490px) {
   .slider__img {
     width: 29rem;

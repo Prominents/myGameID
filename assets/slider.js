@@ -118,11 +118,11 @@ class Slider {
       },
       "<"
     );
-    // TweenMax.from(".title", {
-    //   opacity: 0,
-    //   y: 20,
-    //   ease: Expo.easeInOut,
-    // });
+    TweenMax.from(".title", {
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut,
+    });
   }
 
   // Button Arrow

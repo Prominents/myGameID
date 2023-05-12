@@ -123,7 +123,7 @@ a:hover {
 .slider-image {
   width: 15rem;
   border-radius: 20px;
-  margin-bottom: 34rem;
+  margin-bottom: 32rem;
   filter: drop-shadow(3px 3px 3px #333);
 
 }
@@ -137,8 +137,8 @@ a:hover {
 
 .title {
   position: absolute;
-  top: 276px;
-  left: 40%;
+  bottom: 5%;
+  left: 5%;
   line-height: 1;
   font-size: 80px;
   font-weight: 700;
@@ -154,7 +154,7 @@ a:hover {
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ff6e6e;
+  background: #949494;
   transition: width 0.4s;
 }
 
@@ -164,20 +164,19 @@ a:hover {
 
 .title p {
   font-size: 25px;
-  font-weight: 300;
-  color: grey;
-  text-transform: uppercase;
-  left: 150px;
-  letter-spacing: 10px;
+  font-weight: 700;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
 }
 
 .title code {
-  font-size: 20px;
+  font-size: 21px;
   display: flex;
-  width: 45rem;
   font-weight: 300;
   color: black;
   left: 150px;
+  z-index: 2;
 }
 
 .slider__category {
@@ -265,7 +264,6 @@ a:hover {
   justify-content: center;
   bottom: calc(100% + 0.8em);
 }
-
 .slider__index :last-child {
   color: var(--color-secondary);
 }
@@ -329,4 +327,32 @@ a:hover {
   .slider__footer {
     margin-bottom: 2.8em;
   }
+}
+
+code{
+  background: #f3f3f3;
+  place-self: center;font-size: 1.5em;
+  border: 1px #e8e8e8 solid;
+  border-left: 6px #949494 solid;
+  border-radius : 8px;
+  padding:11px 20px;
+  color: #111;
+  z-index: 2;
+}
+
+code:before{
+  content:'ID:';
+  margin-right: 11px;
+}
+
+
+body.special:before{
+  content:'Copied to Clipboard!';
+  position: absolute;
+  left:0;
+  right: 0;
+  background: #70b8ff;
+  font-weight: bold;
+  color: #005f87;
+  padding: 1%;
 }

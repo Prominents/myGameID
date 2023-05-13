@@ -6,36 +6,36 @@ const items = [
     logo: "assets/logo-HSR.png",
     naming: "Honkai Star Rail",
     bgImg: "assets/HSR.webp",
-    ign:'Levin',
-    ID: '800039374'
+    ign: "Levin",
+    idg: "800039374",
   },
   {
     logo: "assets/logo-BA.png",
     naming: "Blue Archive",
     bgImg: "assets/BA.webp",
-    ign:'Leonhardt',
-    ID: '415006'
+    ign: "Leonhardt",
+    idg: "415006",
   },
   {
     logo: "assets/logo-GI.png",
     naming: "Genshin Impact",
     bgImg: "assets/GI.webp",
-    ign:'Levin',
-    ID: '801777776'
+    ign: "Levin",
+    idg: "801777776",
   },
   {
     logo: "assets/logo-WF.png",
     naming: "World Flipper",
     bgImg: "assets/WF.webp",
-    ign:'Leonhardt',
-    ID: '238827952432'
+    ign: "Leonhardt",
+    idg: "238827952432",
   },
   {
     logo: "assets/logo-HI3.png",
     naming: "Honkai Impact",
     bgImg: "assets/HI3.webp",
-    ign:'Leonhardt',
-    ID: '14985692'
+    ign: "Leonhardt",
+    idg: "14985692",
   },
 ];
 
@@ -54,13 +54,12 @@ class Slider {
 
   // Item Property
   renderItem() {
-    const { logo, naming, ID,ign } = this.items[this.active];
+    const { logo, naming, ign } = this.items[this.active];
 
     const sliderContent = `
        <img class="slider-image" src="${logo}" alt="${naming}" />
        <div class="title">
        <p>IGN: ${ign}</p>
-       <code id="data-ctc">${ID}</code>
        </div>
      `;
     const sliderIndex = `
@@ -72,6 +71,7 @@ class Slider {
        }</span>
      `;
 
+    document.querySelector("code").textContent = this.items[this.active].idg;
     document.querySelector(".slider__content").innerHTML = sliderContent;
     document.querySelector(".slider__index").innerHTML = sliderIndex;
   }
@@ -163,37 +163,22 @@ const slider = new Slider(items);
 slider.renderItem();
 slider.basicAimation(1, 1);
 
-
 // Function Copy Clipboard
-const selectable = document.querySelector('#data-ctc');
-selectable.addEventListener('click', ctc);
-selectable.addEventListener('mouseenter', ctc);
-selectable.addEventListener('mouseleave', deSelect);
-
-//Clean everything that already selected
-function deSelect() {
-  document.getSelection().removeAllRanges();
-}
-
-//Main functionality
-function ctc(event) {
-  let selection = window.getSelection();
-  let target = document.getElementsByTagName(event.target.tagName);
-  if (selection.rangeCount > 0) {
-    selection.removeAllRanges();
-  }
-  for (let i = 0; i < target.length; i++) {
-    let range = document.createRange();
-    range.selectNode(target[i]);
-    selection.addRange(range);
-  }
-  if (event.type == "click" && event.detail < 2) {
-    //Native JS copy to clipboard
-    document.execCommand("copy");
-    // if single clicked show flash message
-    flash();
+async function copyTargetText(e) {
+  try {
+    await navigator.clipboard.writeText(e.target.innerText);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
   }
 }
+
+//event after copying
+document.querySelector("code").addEventListener("click", (e) => {
+  e.preventDefault();
+  copyTargetText(e);
+
+  flash();
+});
 
 //Simple Flash message
 function flash() {

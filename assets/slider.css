@@ -137,8 +137,8 @@ a:hover {
 
 .title {
   position: absolute;
-  bottom: 5%;
-  left: 5%;
+  bottom: 13%;
+  left: 3%;
   line-height: 1;
   font-size: 80px;
   font-weight: 700;
@@ -264,6 +264,7 @@ a:hover {
   justify-content: center;
   bottom: calc(100% + 0.8em);
 }
+
 .slider__index :last-child {
   color: var(--color-secondary);
 }
@@ -329,27 +330,30 @@ a:hover {
   }
 }
 
-code{
+code {
   background: #f3f3f3;
-  place-self: center;font-size: 1.5em;
+  bottom: 5%;
+  left: 5%;
+  place-self: center;
+  font-size: 1.5em;
   border: 1px #e8e8e8 solid;
   border-left: 6px #949494 solid;
-  border-radius : 8px;
-  padding:11px 20px;
+  border-radius: 8px;
+  padding: 11px 20px;
   color: #111;
   z-index: 2;
 }
 
-code:before{
-  content:'ID:';
+code:before {
+  content: 'ID:';
   margin-right: 11px;
 }
 
 
-body.special:before{
-  content:'Copied to Clipboard!';
+body.special:before {
+  content: 'Copied to Clipboard!';
   position: absolute;
-  left:0;
+  left: 0;
   right: 0;
   background: #70b8ff;
   font-weight: bold;

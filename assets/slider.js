@@ -6,6 +6,7 @@ const items = [
     logo: "assets/logo-HSR.png",
     naming: "Honkai Star Rail",
     bgImg: "assets/HSR.webp",
+    server: "Asia",
     ign: "Levin",
     idg: "800039374",
   },
@@ -13,6 +14,7 @@ const items = [
     logo: "assets/logo-BA.png",
     naming: "Blue Archive",
     bgImg: "assets/BA.webp",
+    server: "Global",
     ign: "Leonhardt",
     idg: "415006",
   },
@@ -20,6 +22,7 @@ const items = [
     logo: "assets/logo-GI.png",
     naming: "Genshin Impact",
     bgImg: "assets/GI.webp",
+    server: "Asia",
     ign: "Levin",
     idg: "801777776",
   },
@@ -27,6 +30,7 @@ const items = [
     logo: "assets/logo-WF.png",
     naming: "World Flipper",
     bgImg: "assets/WF.webp",
+    server: "Global",
     ign: "Leonhardt",
     idg: "238827952432",
   },
@@ -34,6 +38,7 @@ const items = [
     logo: "assets/logo-HI3.png",
     naming: "Honkai Impact",
     bgImg: "assets/HI3.webp",
+    server: "Asia",
     ign: "Leonhardt",
     idg: "14985692",
   },
@@ -41,6 +46,7 @@ const items = [
     logo: "assets/logo-GT.png",
     naming: "Guardian Tales",
     bgImg: "assets/GT.webp",
+    server: "Asia - World 2",
     ign: "Leonhardt",
     idg: "#R9D5W",
   },
@@ -48,6 +54,7 @@ const items = [
     logo: "assets/logo-HE.png",
     naming: "Higan: Eruthyll",
     bgImg: "assets/HE.webp",
+    server: "Vanguard",
     ign: "Leonhardt",
     idg: "4737418940098",
   },
@@ -68,10 +75,13 @@ class Slider {
 
   // Item Property
   renderItem() {
-    const { logo, naming, ign } = this.items[this.active];
+    const { logo, naming, server, ign } = this.items[this.active];
 
     const sliderContent = `
        <img class="slider-image" src="${logo}" alt="${naming}" />
+       <div class="server">
+       <h5>Server: ${server}</h5>
+       </div>
        <div class="title">
        <p>IGN: ${ign}</p>
        </div>

@@ -37,6 +37,20 @@ const items = [
     ign: "Leonhardt",
     idg: "14985692",
   },
+  {
+    logo: "assets/logo-GT.png",
+    naming: "Guardian Tales",
+    bgImg: "assets/GT.webp",
+    ign: "Leonhardt",
+    idg: "#R9D5W",
+  },
+  {
+    logo: "assets/logo-HE.png",
+    naming: "Higan: Eruthyll",
+    bgImg: "assets/HE.webp",
+    ign: "Leonhardt",
+    idg: "4737418940098",
+  },
 ];
 
 const timeLine = gsap.timeline();

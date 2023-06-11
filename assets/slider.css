@@ -359,6 +359,26 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .slider__footer {
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    bottom: 3%;
+  }
+  .slider-image {
+    margin-bottom: 37rem;
+}
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slider {
+    position: relative;
+  }
+}
+
 code {
   background: #f3f3f3;
   bottom: 5%;

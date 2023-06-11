@@ -106,7 +106,7 @@ class Slider {
       delay,
       duration: 0.2,
       backgroundSize: "cover",
-      background: `url(${items[this.active].bgImg})`,
+      background: `url(${items[this.active].bgImg}) no-repeat center fixed`,
       ease: "power2.in",
     });
     timeLine.fromTo(

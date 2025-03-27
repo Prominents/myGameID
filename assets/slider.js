@@ -27,14 +27,6 @@ const items = [
     idg: "801777776",
   },
   {
-    logo: "assets/logo-WF.png",
-    naming: "World Flipper",
-    bgImg: "assets/WF.jpg",
-    server: "Global",
-    ign: "Leonhardt",
-    idg: "238827952432",
-  },
-  {
     logo: "assets/logo-HI3.png",
     naming: "Honkai Impact",
     bgImg: "assets/HI3.jpg",
@@ -51,12 +43,12 @@ const items = [
     idg: "#R9D5W",
   },
   {
-    logo: "assets/logo-HE.png",
-    naming: "Higan: Eruthyll",
-    bgImg: "assets/HE.jpg",
-    server: "Vanguard",
-    ign: "Leonhardt",
-    idg: "4737418940098",
+    logo: "assets/logo-ZZZ.png",
+    naming: "Zenless Zone Zero",
+    bgImg: "assets/ZZZ.webp",
+    server: "Asia",
+    ign: "Levin",
+    idg: "1300079872",
   },
 ];
 

@@ -5,10 +5,9 @@ As a Online RPG game player who enjoys playing a variety of games across differe
 - Honkai Star Rail  <code>ID: 800039374</code>
 - Blue Archive      <code>ID: 415006</code>
 - Genshin Impact    <code>ID: 801777776</code>
-- World Flipper     <code>ID: 238827952432</code>
+- Zenless Zone Zero <code>ID: 1300079872</code>
 - Honkai Impact 3rd <code>ID: 14985692</code>
 - Guardian Tales    <code>ID: #R9D5W</code>
-- Higan: Eruthyll   <code>ID: 4737418940098</code>
 
 As a player of these games who enjoys exploring different game worlds and engaging in challenging battles with a variety of game mechanic. May also enjoy collecting or hoarding item and equipment, as well as building strong teams of characters with powerful abilities and skills.
 
